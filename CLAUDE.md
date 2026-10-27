@@ -35,7 +35,7 @@ jupyter nbconvert --to notebook --execute --inplace [0-9][0-9]_*/*.ipynb
 
 There is no test suite or linter. A notebook "passes" if it executes without errors.
 
-Sections 05 and 06 download MNIST and FashionMNIST, which are reachable from Claude Code cloud sessions. `download.pytorch.org` (CPU wheels, pretrained weights), HuggingFace and CIFAR-10's host are blocked there. That is why 06 pretrains its own source model instead of using ImageNet weights, and why torch is installed from conda-forge instead (PyPI's CUDA build is very slow to download):
+Sections 05 and 06 each download MNIST into their own `data/downloads/`; MNIST and FashionMNIST are reachable from Claude Code cloud sessions. `download.pytorch.org` (CPU wheels, pretrained weights), HuggingFace and CIFAR-10's host are blocked there. That is why 06 pretrains its own source model (MNIST digits 0-4, transferred to 5-9) instead of using ImageNet weights, and why torch is installed from conda-forge instead (PyPI's CUDA build is very slow to download):
 
 ```bash
 curl -sSL https://conda.anaconda.org/conda-forge/linux-64/micromamba-2.0.5-0.tar.bz2 | tar xj bin/micromamba
