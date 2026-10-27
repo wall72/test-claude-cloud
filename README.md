@@ -35,10 +35,9 @@ GPU가 있으면 노트북이 자동으로 CUDA를 사용하고, 없으면 CPU�
 ## 명령줄에서 실행
 
 ```bash
-# 노트북 하나 (반드시 섹션 폴더 안에서 실행)
-cd 03_linear_regression
-jupyter nbconvert --to notebook --execute --inplace 03_linear_regression.ipynb
+# 노트북 하나 (nbconvert는 노트북이 있는 폴더를 작업 디렉터리로 사용)
+jupyter nbconvert --to notebook --execute --inplace 03_linear_regression/03_linear_regression.ipynb
 
 # 전체
-for d in [0-9][0-9]_*/; do (cd "$d" && jupyter nbconvert --to notebook --execute --inplace "${d%/}.ipynb"); done
+jupyter nbconvert --to notebook --execute --inplace [0-9][0-9]_*/*.ipynb
 ```
