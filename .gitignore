@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+venv/
+
+# 섹션별 대용량 다운로드 데이터와 학습된 모델
+*/data/downloads/
+*/data/*.pt
