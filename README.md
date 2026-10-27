@@ -11,7 +11,7 @@ PyTorch 기초부터 전이학습, 시퀀스 모델까지 단계별로 보여주
 | 03 | [03_linear_regression](03_linear_regression/03_linear_regression.ipynb) | `nn.Module`, 손실함수, 옵티마이저, 학습 루프 |
 | 04 | [04_dataset_dataloader](04_dataset_dataloader/04_dataset_dataloader.ipynb) | 커스텀 `Dataset`, `DataLoader`, transform |
 | 05 | [05_mnist_cnn](05_mnist_cnn/05_mnist_cnn.ipynb) | CNN으로 MNIST 분류, 모델 저장/불러오기 |
-| 06 | [06_transfer_learning](06_transfer_learning/06_transfer_learning.ipynb) | 사전학습 ResNet18을 CIFAR-10으로 미세조정 |
+| 06 | [06_transfer_learning](06_transfer_learning/06_transfer_learning.ipynb) | FashionMNIST 일부 클래스로 사전학습한 CNN을 나머지 클래스에 전이 (freeze vs fine-tuning) |
 | 07 | [07_sequence_models](07_sequence_models/07_sequence_models.ipynb) | 문자 단위 LSTM과 Transformer로 텍스트 생성 |
 
 ## 폴더 규칙
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-GPU가 있으면 노트북이 자동으로 CUDA를 사용하고, 없으면 CPU에서 실행됩니다. 05~06은 인터넷에서 데이터셋과 사전학습 가중치를 내려받습니다.
+GPU가 있으면 노트북이 자동으로 CUDA를 사용하고, 없으면 CPU에서 실행됩니다. 05~06은 첫 실행 때 인터넷에서 데이터셋(MNIST, FashionMNIST)을 내려받습니다.
 
 ## 명령줄에서 실행
 
